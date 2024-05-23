@@ -22,6 +22,7 @@ You will need to replace 'your_supabase_url.com' and 'your_supabase_key' with yo
 
   
 ## Project Structure
+```markdown
 bright_hr/
 ├── dist/
 │   └── index.js
@@ -39,3 +40,6 @@ bright_hr/
 ├── README.md
 ├── tsconfig.json
 └── yarn.lock
+```
+
+
