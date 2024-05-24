@@ -1,4 +1,4 @@
-# Bright HR API
+# SUPAEXPRESS API BASE
 
 This is a base API for setup built using Express and TypeScript with ESLint.
 
