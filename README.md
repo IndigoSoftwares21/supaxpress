@@ -1,7 +1,7 @@
 # SUPAEXPRESS API BASE
 
 This is a base API for setup built using Express and TypeScript with ESLint.
-
+It was inspired by [Xest JS](https://xestjs.com/) and [Ersel Aker](https://github.com/ersel)
 ## Installation
 
 1. Clone the repository
