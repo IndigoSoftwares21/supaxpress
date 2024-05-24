@@ -1,6 +1,6 @@
 # Bright HR API
 
-This is a demo API for Bright HR built using Express and TypeScript with ESLint.
+This is a base API for setup built using Express and TypeScript with ESLint.
 
 ## Installation
 

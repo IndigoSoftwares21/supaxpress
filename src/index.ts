@@ -11,7 +11,7 @@ import router from "./routes";
 dotenv.config();
 
 const app: Express = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 6969;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
