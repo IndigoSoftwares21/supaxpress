@@ -1,18 +1,38 @@
-import { Request, Response } from "express";
-import { fetchAllUsers } from "@actions/users";
+import { Request, Response, NextFunction } from "express";
+import { fetchAllUsers, fetchUserById } from "@actions/users";
+import { getUserByIdSchema } from "@root/src/schemas/users";
+import { errorHandler } from "@root/src/middlewares/error";
 
 const getAllUsers = async (req: Request, res: Response) => {
-  const { data: users, error } = await fetchAllUsers();
+  try {
+    const { data: users, error } = await fetchAllUsers();
 
-  if (error) {
-    return res.status(400).send({
-      message: "An error occurred while fetching users",
-      error,
-    });
+    if (error) {
+      throw new Error("An error occurred while fetching users");
+    }
+
+    res.send({ users });
+  } catch (err) {
+    errorHandler(err, req, res, () => {});
   }
-  return res.send({
-    users,
-  });
 };
 
-export { getAllUsers };
+const getUserById = async (req: Request, res: Response, next: NextFunction) => {
+  const { id } = req.params;
+
+  try {
+    getUserByIdSchema.parse({ id });
+
+    const { data: user, error } = await fetchUserById(id);
+
+    if (error) {
+      throw new Error("An error occurred while fetching the user");
+    }
+
+    res.send({ user });
+  } catch (err) {
+    errorHandler(err, req, res, next);
+  }
+};
+
+export { getAllUsers, getUserById };

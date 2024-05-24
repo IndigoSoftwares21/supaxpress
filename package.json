@@ -9,6 +9,10 @@
     "start": "node dist/index.js",
     "dev": "nodemon src/index.ts"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/IndigoSoftwares21/supaxpress.git"
+  },
   "keywords": [
     "supabase",
     "api",
@@ -16,7 +20,7 @@
     "express"
   ],
   "author": "Precious Chidera Orjiude",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "@supabase/supabase-js": "^2.43.4",
     "body-parse": "^0.1.0",
@@ -42,6 +46,7 @@
     "@db": "src/db",
     "@controllers": "src/controllers",
     "@routes": "src/routes",
-    "@middlewares": "src/middlewares"
+    "@middlewares": "src/middlewares",
+    "@schemas": "src/schemas"
   }
 }
