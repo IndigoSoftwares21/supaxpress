@@ -1,12 +1,7 @@
 # SupaXpress Installer
 
-<<<<<<< HEAD
 This installer helps you set up the SupaXpress API base quickly and easily.
 
-=======
-This is a base API for setup built using Express and TypeScript with ESLint.
-It was inspired by [Xest JS](https://xestjs.com/) and [Ersel Aker](https://github.com/ersel)
->>>>>>> 53af930110d1865cc973877ea786d36ac5c23332
 ## Installation
 
 To install the SupaXpress installer globally, run:
