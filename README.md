@@ -1,45 +1,40 @@
-# SUPAEXPRESS API BASE
+# SupaXpress Installer
 
-This is a base API for setup built using Express and TypeScript with ESLint.
+This installer helps you set up the SupaXpress API base quickly and easily.
 
 ## Installation
 
-1. Clone the repository
-2. Install dependencies using `npm install`
+To install the SupaXpress installer globally, run:
+```sh
+npm install -g supaxpress
+```
 
-## Database
-Before setting up Supabase, make sure you have the following:
-- Supabase URL
-- Supabase API Key
+## Usage
+To install SupaXpress in the current directory, run:
 
-You will need to replace 'your_supabase_url.com' and 'your_supabase_key' with your actual Supabase URL and API Key in the code snippet provided.
-
-## Scripts
-
-- `npm run build`: Build the project using TypeScript compiler
-- `npm start`: Start the server
-- `npm run dev`: Start the server with nodemon for development
-
-  
-## Project Structure
-```markdown
-bright_hr/
-├── dist/
-│   └── index.js
-├── node_modules/
-├── src/
-│   ├── actions/
-│   ├── controllers/
-│   ├── db/
-│   ├── middlewares/
-│   ├── routes/
-│   └── utils/
-├── .eslintrc.json
-├── .gitignore
-├── package.json
-├── README.md
-├── tsconfig.json
-└── yarn.lock
+```sh
+npx supaxpress .
+```
+To install SupaXpress in a new directory named my_project, run:
+```sh
+npx supaxpress my_project
 ```
 
 
+## DATABASE
+This project uses SUPABASE.
+You will need to add the below environment variables to your .env file
+```sh
+SUPABASE_URL=your_supabase_url
+SUPABASE_KEY=your_supabase_key
+SUPABASE_TOKEN=your_supabase_token
+```
+Go to [SUPABASE](https://supabase.com/) to get your Supabase URL, key and token.
+
+### Learn More
+For more information about  SupaXpress, visit the [SupaXpress](https://github.com/IndigoSoftwares21/supaxpress.git) GitHub repository.
+
+
+### Mentions
+
+Inspired by [Xest JS](https://xestjs.com/) and [Ersel Aker](https://github.com/ersel).
